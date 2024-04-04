@@ -50,7 +50,7 @@ export const createUserController = asyncWrapper(async (req: Request, res: Respo
             expiresIn: "40s",
         });
 
-        return res.status(StatusCodes.OK).json({
+        return res.status(StatusCodes.CREATED).json({
             user_id: newUser[0].user_id,
             access_token: accessToken,
         });
